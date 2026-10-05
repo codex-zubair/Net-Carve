@@ -47,6 +47,8 @@ DONE:
   [x] README with full feature/architecture/testing docs
   [x] GitHub Actions CI
   [x] git init + committed + pushed to github.com/codex-zubair/Net-Carve
+  [x] Installed and verified on physical device (Samsung SM-S908U,
+      serial R5CT6106Q3N) via `adb install -r app-release.apk`
 PENDING:
   [ ] Enable GitHub Pages on the repo (Settings -> Pages -> /docs)
   [ ] Play Console: create app, upload AAB, store listing, data safety
@@ -173,3 +175,8 @@ branch" -> Branch: main, Folder: /docs.
   - Added privacy policy, README, CI, handoff doc.
   - Committed and pushed to github.com/codex-zubair/Net-Carve (main,
     commit 854b2cf). GitHub Pages not yet enabled (needs `gh auth login`).
+2026-10-06  Device install + UI fix.
+  - Built release APK and installed on Samsung SM-S908U via adb.
+  - Fixed redundant "Reserved" badge shown alongside "Private (RFC 1918)".
+  - Install command: adb -s R5CT6106Q3N install -r <apk>
+  - A release APK copy is kept at /home/codex-zubair/Desktop/APPS/NetCarve-release.apk

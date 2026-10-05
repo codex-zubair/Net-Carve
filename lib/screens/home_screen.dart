@@ -263,7 +263,7 @@ class _ResultView extends StatelessWidget {
                     color: isPrivate ? AppColors.amber : AppColors.success,
                   ),
                   InfoBadge(network.addressClass.label),
-                  if (isReserved)
+                  if (isReserved && !isPrivate)
                     const InfoBadge(
                       'Reserved / not routable',
                       color: AppColors.danger,
