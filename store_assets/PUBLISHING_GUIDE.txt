@@ -60,7 +60,7 @@ The app and the Play listing both reference this URL. Do this first.
       Branch = main,  Folder = /docs
     Save.
 2.4 Wait 1-2 minutes. Verify in a browser:
-      https://codex-zubair.github.io/Net-Carve/privacy-policy/
+      https://codex-zubair.github.io/all_privacy_policy/netcarve/
     It should render the NetCarve privacy policy.
 2.5 If you prefer a custom domain (e.g. acrosscloud.com/privacy), add a
     CNAME and DNS record later; the github.io URL is fine to start.

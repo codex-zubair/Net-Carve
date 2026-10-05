@@ -22,7 +22,7 @@ Contact email:                iam.nmzar@gmail.com
 Contact website (optional):   https://github.com/codex-zubair
 Contact phone (optional):     (leave blank)
 
-Privacy policy URL:           https://codex-zubair.github.io/Net-Carve/privacy-policy/
+Privacy policy URL:           https://codex-zubair.github.io/all_privacy_policy/netcarve/
 
 ========================================================================
 STORE LISTING TEXT

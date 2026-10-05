@@ -162,7 +162,7 @@ dart run flutter_native_splash:create
 ## Privacy
 
 NetCarve collects no data and makes no network requests. See the full
-[Privacy Policy](https://codex-zubair.github.io/Net-Carve/privacy-policy/).
+[Privacy Policy](https://codex-zubair.github.io/all_privacy_policy/netcarve/).
 
 ---
 

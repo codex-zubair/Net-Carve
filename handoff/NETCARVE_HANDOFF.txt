@@ -59,7 +59,7 @@ PENDING:
         - .nojekyll in both root and docs/
       NOTE: Pages source for this repo is Branch=main, Folder=/docs.
       Verified live:
-        https://codex-zubair.github.io/Net-Carve/privacy-policy/  -> 200
+        https://codex-zubair.github.io/all_privacy_policy/netcarve/  -> 200
         https://codex-zubair.github.io/Net-Carve/                 -> 200 (redirect)
   [ ] Play Console: create app, upload AAB, store listing, data safety
   [ ] Provide Play Store screenshots/feature graphic
@@ -154,7 +154,7 @@ cannot publish updates to the same Play listing.
 ========================================================================
 File:  docs/privacy-policy/index.html
 URL (after enabling Pages from /docs):
-  https://codex-zubair.github.io/Net-Carve/privacy-policy/
+  https://codex-zubair.github.io/all_privacy_policy/netcarve/
 AppInfo.privacyPolicyUrl in lib/core/app_info.dart is set to this URL.
 
 To enable: GitHub repo -> Settings -> Pages -> Source: "Deploy from a

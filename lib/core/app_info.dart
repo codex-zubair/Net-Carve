@@ -11,9 +11,9 @@ class AppInfo {
   /// Public source-code repository, used by the "View our Clean Code" button.
   static const String githubUrl = 'https://github.com/codex-zubair/Net-Carve';
 
-  /// Hosted privacy policy (GitHub Pages).
+  /// Hosted privacy policy (central GitHub Pages site for all apps).
   static const String privacyPolicyUrl =
-      'https://codex-zubair.github.io/Net-Carve/privacy-policy/';
+      'https://codex-zubair.github.io/all_privacy_policy/netcarve/';
 
   static const String companyUrl = 'https://github.com/codex-zubair';
 
