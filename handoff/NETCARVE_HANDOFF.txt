@@ -1,0 +1,173 @@
+========================================================================
+NETCARVE - WORK PROGRESS / HANDOFF
+========================================================================
+App:        NetCarve
+Subtitle:   Subnet & CIDR Calculator
+Company:    Across Cloud LLC (Wyoming LLC, DUNS 133631518, Active)
+Package:    com.acrosscloud.netcarve
+Repo:       git@github.com:codex-zubair/Net-Carve.git
+License:    MIT
+Platform:   Android only (Play Store)
+Version:    1.0.0+1
+Last updated: 2026-10-06
+
+READ THIS FIRST. Keep it updated: current state, what is done, what is
+pending, commands, blockers.
+
+========================================================================
+1. GOAL
+========================================================================
+Ship a free, ad-free, fully offline "Subnet & CIDR" network calculator for
+Android under the Across Cloud LLC developer name.
+
+Two objectives (B2B marketing strategy):
+  - Utility hook: a genuinely useful, lightweight, offline tool that
+    network engineers keep on their phones (works in secure/air-gapped
+    data centres).
+  - Code showcase: the public GitHub repo is a digital portfolio proving
+    the company writes clean, well-tested, production-grade native code.
+    The About screen has a "View our Clean Code on GitHub" button.
+
+========================================================================
+2. STATUS
+========================================================================
+DONE:
+  [x] Flutter project scaffolded (org com.acrosscloud, android only)
+  [x] Pure-Dart engine: ipv4.dart, subnet.dart, vlsm.dart, ipv6.dart
+  [x] UI: Home (IPv4 calc + binary view), VLSM planner, IPv6 explorer,
+          History (local), About (showcase + links)
+  [x] Dark "instrument panel" theme + brand wordmark
+  [x] 51 tests passing (unit + widget)
+  [x] flutter analyze: 0 issues
+  [x] Branding: logo generator (pure python, no deps), launcher icons,
+          native splash
+  [x] Release signing keystore + build.gradle.kts release config
+  [x] Release AAB builds successfully (54.5 MB)
+  [x] Privacy policy HTML (docs/privacy-policy/index.html)
+  [x] README with full feature/architecture/testing docs
+  [x] GitHub Actions CI
+PENDING:
+  [ ] git init + push to git@github.com:codex-zubair/Net-Carve.git
+  [ ] Enable GitHub Pages on the repo (Settings -> Pages -> /docs)
+  [ ] Play Console: create app, upload AAB, store listing, data safety
+  [ ] Provide Play Store screenshots/feature graphic
+
+========================================================================
+3. KEY FACTS / DECISIONS
+========================================================================
+- Name chosen: "NetCarve" (Play search showed no exact match; a formal
+  trademark check is still advisable before publishing).
+- GitHub owner: codex-zubair (existing account, existing SSH key).
+- License: MIT (maximizes the code-showcase value).
+- Scope v1.0: IPv4 + VLSM + IPv6. Android only.
+- No backend. No INTERNET permission. No ads, no analytics.
+- Local history uses shared_preferences only.
+- Signing keystore is git-ignored; password stored in android/key.properties
+  (also git-ignored). KEEP THE .jks SAFE - losing it blocks Play updates.
+
+========================================================================
+4. PROJECT LAYOUT
+========================================================================
+lib/
+  core/          Pure Dart, no Flutter imports (the showcase)
+    ipv4.dart      Ipv4Address: parse/validate/formats/classification
+    subnet.dart    SubnetInfo + SubnetCalculator
+    vlsm.dart      VlsmPlanner + HostRequirement + VlsmPlan
+    ipv6.dart      Ipv6Address (BigInt 128-bit)
+    app_info.dart  Brand/links constants
+  services/      history_service.dart (SharedPreferences)
+  state/         calculator_state.dart (ChangeNotifier)
+  screens/       root_shell, home, vlsm, ipv6, history, about
+  widgets/       brand, binary_view, common
+  theme/         app_theme.dart
+test/            ipv4_test, subnet_test, vlsm_test, ipv6_test, widget_test
+tool/            generate_icons.py (pure python PNG generator)
+docs/privacy-policy/index.html   (GitHub Pages source)
+android/         signing config, keystore (git-ignored)
+.github/workflows/ci.yml
+
+========================================================================
+5. COMMANDS
+========================================================================
+Setup:
+  cd /home/codex-zubair/Desktop/APPS/netcarve
+  flutter pub get
+
+Quality:
+  flutter analyze
+  flutter test
+  dart format lib test tool
+
+Build:
+  flutter build appbundle --release
+  # output: build/app/outputs/bundle/release/app-release.aab
+  flutter build apk --release          # sideload APK
+
+Assets:
+  python3 tool/generate_icons.py       # regenerate icon art
+  dart run flutter_launcher_icons
+  dart run flutter_native_splash:create
+
+Git (first push):
+  git remote add origin git@github.com:codex-zubair/Net-Carve.git
+  git branch -M main
+  git add .
+  git commit -m "Initial release: NetCarve offline subnet & CIDR calculator"
+  git push -u origin main
+
+========================================================================
+6. SIGNING
+========================================================================
+Keystore: android/netcarve-release.jks  (git-ignored)
+Alias:    netcarve
+Pass:     netcarve2026key   (in android/key.properties, git-ignored)
+DN:       CN=Across Cloud LLC, O=Across Cloud LLC, L=Sheridan, ST=Wyoming, US
+
+IMPORTANT: back up the .jks + key.properties somewhere safe. If lost, you
+cannot publish updates to the same Play listing.
+
+========================================================================
+7. PRIVACY POLICY
+========================================================================
+File:  docs/privacy-policy/index.html
+URL (after enabling Pages from /docs):
+  https://codex-zubair.github.io/Net-Carve/privacy-policy/
+AppInfo.privacyPolicyUrl in lib/core/app_info.dart is set to this URL.
+
+To enable: GitHub repo -> Settings -> Pages -> Source: "Deploy from a
+branch" -> Branch: main, Folder: /docs.
+
+========================================================================
+8. PENDING WORK / NEXT SESSION
+========================================================================
+1. git init (already scaffolded by flutter create? verify) + push.
+2. Enable GitHub Pages (/docs) and confirm privacy policy URL resolves.
+3. Create Play Console listing:
+   - App name: NetCarve
+   - Short desc: Offline subnet & CIDR calculator - no ads, no tracking.
+   - Upload app-release.aab to a production/internal track.
+   - Data safety form: "No data collected" (matches policy).
+   - Content rating questionnaire (utility).
+4. Supply store graphics: 512 icon (assets/images/play_icon_512.png ready),
+   feature graphic (1024x500) still needed, phone screenshots still needed.
+5. Optional v1.1 ideas: CIDR-to-range reverse lookup, theme toggle,
+   share-as-text, IPv6 VLSM.
+
+========================================================================
+9. VERIFIED WORKING (this session)
+========================================================================
+- flutter analyze: No issues found
+- flutter test: 51/51 passed
+- flutter build appbundle --release: SUCCESS (54.5 MB)
+- Icon art generated and visually verified.
+
+========================================================================
+10. CHANGELOG
+========================================================================
+2026-10-06  Initial build.
+  - Scaffolded project, wrote full engine + UI + tests.
+  - Added branding generator; produced app icon, adaptive foreground,
+    splash, and Play 512 icon.
+  - Release keystore created; R8 rules added (Play Core -dontwarn).
+  - Release AAB built successfully.
+  - Added privacy policy, README, CI, handoff doc.
