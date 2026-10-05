@@ -54,6 +54,17 @@ PENDING:
   [ ] Play Console: create app, upload AAB, store listing, data safety
   [ ] Provide Play Store screenshots/feature graphic
 
+PLAY STORE RELEASE KIT (2026-10-06):
+  [x] Keystore + credentials backed up to
+      /mnt/external_disk/ALL-APP-KEYS/NetCarve/  (jks, key.properties, README)
+  [x] Store listing copy:    store_assets/PLAY_STORE_LISTING.txt
+  [x] Full publishing guide:  store_assets/PUBLISHING_GUIDE.txt
+  [x] Feature graphic:        store_assets/graphics/feature_graphic_1024x500.png
+  [x] Phone screenshots x5:   store_assets/screenshots/0{4..8}_*.png
+  [x] Play icon 512:          assets/images/play_icon_512.png
+  [x] Final signed AAB:       build/app/outputs/bundle/release/app-release.aab
+  [x] Device screenshot script: tool/capture_screenshots.sh
+
 ========================================================================
 3. KEY FACTS / DECISIONS
 ========================================================================

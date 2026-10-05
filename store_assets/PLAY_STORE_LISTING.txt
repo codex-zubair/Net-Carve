@@ -1,0 +1,226 @@
+========================================================================
+NETCARVE - GOOGLE PLAY STORE LISTING CONTENT
+========================================================================
+Copy/paste these values directly into the Play Console.
+Character limits are noted; all values are within limits.
+
+========================================================================
+APP IDENTITY
+========================================================================
+App name (max 30):            NetCarve
+                              (8 characters)
+
+Package name (permanent):     com.acrosscloud.netcarve
+
+Default language:             English (United States) - en-US
+
+App category:                 Tools
+Tags (max 5):                 Subnet calculator, CIDR, IP address,
+                              Network tools, IPv6
+
+Contact email:                iam.nmzar@gmail.com
+Contact website (optional):   https://github.com/codex-zubair
+Contact phone (optional):     (leave blank)
+
+Privacy policy URL:           https://codex-zubair.github.io/Net-Carve/privacy-policy/
+
+========================================================================
+STORE LISTING TEXT
+========================================================================
+
+--- Short description (max 80) ---
+Offline subnet & CIDR calculator for IPv4 and IPv6. No ads, no tracking.
+(76 characters)
+
+--- Full description (max 4000) ---
+NetCarve is a fast, precise, fully offline subnet and CIDR calculator built
+for network engineers, cloud architects, and DevOps teams. It performs all
+IPv4 and IPv6 address math directly on your device using exact binary
+arithmetic - no internet connection is ever required.
+
+Designed for secure environments, NetCarve requests no internet permission,
+contains no advertising, and includes no analytics or tracking. It works in
+air-gapped data centres and restricted facilities where network access is
+unavailable or not allowed.
+
+WHY NETCARVE
+- Completely offline: zero network requests, no INTERNET permission.
+- No ads and no trackers: no advertising SDKs, no analytics, no telemetry.
+- Exact math: every value is derived from integer bit operations, correct
+  for every prefix length.
+- Engineer-first design: instant on-keystroke results and copy-to-clipboard
+  on every value.
+- Free and lightweight.
+
+IPV4 SUBNET CALCULATOR
+- Enter an IPv4 address or full CIDR notation, such as 10.20.30.40/20.
+- Instant results: network address, broadcast address, subnet mask,
+  wildcard mask, first and last usable host, gateway, and total and usable
+  host counts.
+- Correct handling of special cases: /0, /31 point-to-point links (RFC 3021),
+  and /32 host routes.
+- Address classification: class A-E, private (RFC 1918), loopback,
+  link-local, multicast, carrier-grade NAT (RFC 6598), documentation ranges,
+  and reserved ranges.
+- Binary, hexadecimal and reverse-DNS representations.
+- Visual binary bit view that highlights network bits versus host bits.
+
+VLSM PLANNER
+- Equal split: divide a parent block into 2, 4, 8, 16... subnets.
+- By hosts: allocate right-sized subnets from a list of host requirements,
+  placed largest-first and size-aligned so no two blocks ever overlap.
+- See block size, mask, usable range and host count for each allocation,
+  plus remaining free addresses and utilisation.
+
+IPV6 EXPLORER
+- Parse full, compressed, and embedded-IPv4 forms such as
+  ::ffff:192.168.1.1.
+- Canonical compression with the longest zero run replaced by :: per
+  RFC 5952, plus the fully expanded 128-bit form.
+- Address-type classification: unspecified, loopback, link-local,
+  unique local, multicast, documentation, and global unicast.
+- Interactive prefix slider (/0 to /128) showing the block network and last
+  address.
+
+QUALITY OF LIFE
+- Quick presets for common cloud and VPC blocks.
+- Copy-to-clipboard on every value.
+- Local history of saved blocks, stored only on your device.
+- Dark, high-contrast interface that is easy to read in a data centre.
+
+PRIVACY
+NetCarve collects no personal data, uses no advertising or analytics, and
+never connects to the internet. The optional history feature stores
+calculations only in the app's private storage on your device and never
+uploads them. Read the full privacy policy at the link on this listing.
+
+Open source
+NetCarve's complete, unminified source code is public under the MIT license,
+as a demonstration of clean, well-tested, production-grade native software.
+A "View our Clean Code on GitHub" link is available in the app's About
+screen.
+
+Built by Across Cloud LLC.
+
+========================================================================
+DATA SAFETY FORM (Play Console -> App content -> Data safety)
+========================================================================
+Answer exactly as follows.
+
+Does your app collect or share any of the required user data types?
+  -> No
+
+Is all of the user data collected by your app encrypted in transit?
+  -> N/A (no data collected) - if forced, answer "No".
+
+Do you provide a way for users to request that their data is deleted?
+  -> No (because no data is collected).
+
+Data types: leave every category unchecked (Location, Personal info,
+Financial info, Health, Messages, Photos, Files, Calendar, Contacts,
+App activity, Web browsing, App info and performance, Device or other IDs).
+
+Additional:
+  - "Is your app's data collection practice covered by a privacy policy?"
+    -> Yes, provide the privacy policy URL above.
+  - "Has your app been independently validated?" -> No.
+
+Result summary shown to users: "No data collected" and "No data shared".
+This matches the app: no INTERNET permission, no analytics, no ads.
+
+========================================================================
+APP CONTENT QUESTIONNAIRES
+========================================================================
+
+1. Privacy policy
+   -> Provide the URL above.
+
+2. Ads
+   -> No, the app does not contain ads.
+
+3. App access
+   -> All functionality is available without restrictions. (No login.)
+
+4. Content rating questionnaire
+   -> Category: "Utility, Productivity, Communication, or Other"
+   -> Answer "No" to every sensitive-content question (violence, sexuality,
+      language, controlled substances, gambling, etc.).
+   Expected result: Rated for everyone / 3+.
+
+5. Target audience
+   -> Age groups: 18 and over (professional utility).
+      If you prefer broader reach, choose 13+. Do NOT select under 13.
+   -> "Is the app designed for children?" -> No.
+
+6. News app
+   -> No.
+
+7. COVID-19 contact tracing / status apps
+   -> No.
+
+8. Government app
+   -> No.
+
+9. Financial features
+   -> None.
+
+10. Health
+   -> No.
+
+11. Data safety
+   -> See the Data Safety section above.
+
+========================================================================
+PERMISSIONS DECLARATION (Play Console -> App content -> sensitive perms)
+========================================================================
+NetCarve declares NO Android permissions in its manifest. Specifically:
+  - No INTERNET permission.
+  - No location, camera, microphone, storage, contacts, phone, or SMS.
+  - No AD_ID permission.
+
+Because of this, the Play Console will not prompt for permission
+declarations, and the app qualifies for the "no data collected" data safety
+label. The only interaction with external apps is opening links (GitHub /
+privacy policy) via the browser when the user explicitly taps them.
+
+========================================================================
+STORE ASSETS (files provided)
+========================================================================
+App icon (512 x 512 PNG, 32-bit):
+  store_assets/graphics/../assets/images/play_icon_512.png
+  -> /home/codex-zubair/Desktop/APPS/netcarve/assets/images/play_icon_512.png
+
+Feature graphic (1024 x 500 PNG):
+  store_assets/graphics/feature_graphic_1024x500.png
+
+Phone screenshots (1080 x 1920 PNG, minimum 2 required, 8 max):
+  store_assets/screenshots/04_calculator_result.png
+  store_assets/screenshots/05_vlsm_planner.png
+  store_assets/screenshots/06_ipv6_explorer.png
+  store_assets/screenshots/07_history.png
+  store_assets/screenshots/08_about_showcase.png
+
+Optional (not required): 7-inch and 10-inch tablet screenshots. NetCarve runs
+on tablets but phone screenshots are sufficient for a first release.
+
+========================================================================
+RELEASE NOTES (for "What's new" - first release)
+========================================================================
+First release.
+
+- Offline IPv4 subnet calculator with exact binary math.
+- VLSM planner for equal splits and host-based allocation.
+- IPv6 explorer with RFC 5952 compression and address typing.
+- Local, on-device calculation history.
+- No ads, no trackers, no internet permission.
+
+========================================================================
+VERSIONING (for future updates)
+========================================================================
+Current: versionName 1.0.0, versionCode 1.
+To ship an update, edit pubspec.yaml:
+  version: 1.0.1+2        # name 1.0.1, code 2 (code must always increase)
+Then rebuild:
+  flutter build appbundle --release
+and upload the new AAB to the same app in Play Console.
+========================================================================

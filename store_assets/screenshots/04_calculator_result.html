@@ -1,0 +1,87 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"/><style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden}
+body{background:#0B1120;font-family:'DejaVu Sans','Segoe UI',Roboto,sans-serif;color:#E8EEF9}
+.screen{width:1080px;height:1920px;padding:64px 48px 0;position:relative;display:flex;flex-direction:column}
+.statusbar{display:flex;justify-content:space-between;font-size:30px;color:#94A3B8;margin-bottom:20px;padding:0 8px}
+.hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:36px}
+.brand{display:flex;align-items:center;gap:20px}
+.logo{width:78px;height:78px;border-radius:22px;background:linear-gradient(135deg,#2DD4BF,#60A5FA);display:flex;align-items:center;justify-content:center}
+.wordmark{font-size:46px;font-weight:800;letter-spacing:-1px}
+.offline{display:flex;align-items:center;gap:10px;background:#141B2E;border:2px solid #23304D;border-radius:40px;padding:14px 24px;font-size:24px;color:#94A3B8;font-weight:600}
+.offline .dot{color:#2DD4BF}
+.card{background:#141B2E;border:2px solid #23304D;border-radius:28px;padding:34px;margin-bottom:26px}
+.label{color:#94A3B8;font-size:26px;font-weight:600;margin-bottom:18px}
+.section{color:#64748B;font-size:24px;font-weight:800;letter-spacing:2.5px;margin:14px 0 20px}
+.field{background:#0E1526;border:2px solid #23304D;border-radius:22px;padding:30px 28px;display:flex;align-items:center;gap:20px}
+.field .mono{font-family:'DejaVu Sans Mono',monospace;font-size:38px;font-weight:700}
+.btn{background:#2DD4BF;color:#070B15;border-radius:22px;padding:30px;text-align:center;font-size:32px;font-weight:800;margin-top:24px}
+.chips{display:flex;gap:16px;flex-wrap:wrap}
+.chip{background:#1C2540;border:2px solid #23304D;border-radius:20px;padding:18px 28px;font-size:26px;color:#E8EEF9}
+.big{font-family:'DejaVu Sans Mono',monospace;font-size:56px;font-weight:800;color:#2DD4BF}
+.sub{color:#94A3B8;font-size:26px;margin-top:10px}
+.badges{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+.badge{font-size:24px;font-weight:700;padding:12px 22px;border-radius:14px}
+.badge.p{color:#FBBF24;background:rgba(251,191,36,.12);border:2px solid rgba(251,191,36,.4)}
+.badge.c{color:#2DD4BF;background:rgba(45,212,191,.12);border:2px solid rgba(45,212,191,.4)}
+.badge.b{color:#60A5FA;background:rgba(96,165,250,.12);border:2px solid rgba(96,165,250,.4)}
+.badge.v{color:#A78BFA;background:rgba(167,139,250,.12);border:2px solid rgba(167,139,250,.4)}
+.row{display:flex;justify-content:space-between;padding:22px 0;border-bottom:2px solid #23304D}
+.row:last-child{border-bottom:none}
+.row .k{color:#94A3B8;font-size:28px}
+.row .v{font-family:'DejaVu Sans Mono',monospace;font-size:28px;font-weight:600}
+.stats{display:flex;text-align:center}
+.stats .s{flex:1}
+.stats .num{font-family:'DejaVu Sans Mono',monospace;font-size:44px;font-weight:800;color:#2DD4BF}
+.stats .lab{color:#64748B;font-size:22px;margin-top:8px}
+.bits{display:flex;gap:6px;margin-top:8px}
+.bits .b{flex:1;height:46px;border-radius:6px;background:rgba(45,212,191,.16);border:2px solid rgba(45,212,191,.4)}
+.bits .b.h{background:rgba(100,116,139,.12);border-color:rgba(100,116,139,.35)}
+.nav{position:absolute;bottom:0;left:0;right:0;height:150px;background:#070B15;border-top:2px solid #23304D;display:flex;align-items:center;justify-content:space-around;padding-bottom:18px}
+.nav .item{display:flex;flex-direction:column;align-items:center;gap:8px;color:#64748B;font-size:20px}
+.nav .item.on{color:#2DD4BF}
+.nav .ico{width:52px;height:52px;border-radius:14px;background:#1C2540;display:flex;align-items:center;justify-content:center;font-size:28px}
+.nav .on .ico{background:rgba(45,212,191,.18)}
+.alloc{background:#141B2E;border:2px solid #23304D;border-radius:24px;padding:28px;margin-bottom:22px}
+.alloc .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.alloc .name{font-size:30px;font-weight:800}
+.alloc .cidr{font-family:'DejaVu Sans Mono',monospace;font-size:32px;font-weight:700;color:#2DD4BF}
+.alloc .meta{color:#94A3B8;font-size:24px;margin-top:10px;display:flex;justify-content:space-between}
+.tip{background:rgba(45,212,191,.10);border:2px solid rgba(45,212,191,.4);border-radius:20px;padding:26px;font-size:24px;color:#94A3B8;line-height:1.5}
+.select{background:#1C2540;border:2px solid #2DD4BF;border-radius:20px;padding:20px 34px;font-size:26px;color:#2DD4BF;font-weight:700}
+.selrow{display:flex;gap:16px;margin-bottom:24px}
+.hist{display:flex;align-items:center;gap:22px;background:#141B2E;border:2px solid #23304D;border-radius:24px;padding:26px;margin-bottom:20px}
+.hist .ic{width:70px;height:70px;border-radius:18px;background:rgba(45,212,191,.14);display:flex;align-items:center;justify-content:center;font-size:32px;color:#2DD4BF}
+.hist .hc{font-family:'DejaVu Sans Mono',monospace;font-size:32px;font-weight:700}
+.hist .ht{color:#64748B;font-size:22px;margin-top:6px}
+</style></head><body><div class="screen">
+  <div class="statusbar"><span>9:41</span><span>&#9679; &#9679; &#9679; &#9679;</span></div>
+  <div class="hdr">
+    <div class="brand"><div class="logo"><svg width="46" height="46" viewBox="0 0 48 48" fill="none"><rect x="6" y="6" width="36" height="36" rx="9" stroke="#0B1120" stroke-width="5"/><line x1="24" y1="11" x2="24" y2="37" stroke="#0B1120" stroke-width="4.5" stroke-linecap="round"/><line x1="11" y1="24" x2="37" y2="24" stroke="#0B1120" stroke-width="4.5" stroke-linecap="round"/></svg></div><div class="wordmark">NetCarve</div></div>
+    <div class="offline"><span class="dot">&#10003;</span> Offline &amp; Ad-free</div>
+  </div>
+  <div class="card">
+    <div class="big">172.16.0.0/20</div>
+    <div class="sub">Network block  &middot;  /20</div>
+    <div class="badges">
+      <div class="badge p">Private (RFC 1918)</div>
+      <div class="badge c">Class B</div>
+    </div>
+  </div>
+  <div class="section">ADDRESS DETAILS</div>
+  <div class="card">
+    <div class="row"><span class="k">Network</span><span class="v">172.16.0.0</span></div>
+    <div class="row"><span class="k">Broadcast</span><span class="v">172.16.15.255</span></div>
+    <div class="row"><span class="k">Subnet mask</span><span class="v">255.255.240.0</span></div>
+    <div class="row"><span class="k">Wildcard</span><span class="v">0.0.15.255</span></div>
+    <div class="row"><span class="k">First host</span><span class="v">172.16.0.1</span></div>
+    <div class="row"><span class="k">Last host</span><span class="v">172.16.15.254</span></div>
+  </div>
+  <div class="section">CAPACITY</div>
+  <div class="card"><div class="stats">
+    <div class="s"><div class="num">4,094</div><div class="lab">Usable hosts</div></div>
+    <div class="s"><div class="num">4,096</div><div class="lab">Total addrs</div></div>
+    <div class="s"><div class="num">/20</div><div class="lab">Prefix</div></div>
+  </div></div>
+  <div class="nav"><div class="item on"><div class="ico">&#9636;</div>Calc</div><div class="item "><div class="ico">&#9638;</div>VLSM</div><div class="item "><div class="ico">&#9673;</div>IPv6</div><div class="item "><div class="ico">&#8635;</div>History</div><div class="item "><div class="ico">&#8505;</div>About</div></div>
+</div></body></html>
