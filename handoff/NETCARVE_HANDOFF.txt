@@ -50,7 +50,17 @@ DONE:
   [x] Installed and verified on physical device (Samsung SM-S908U,
       serial R5CT6106Q3N) via `adb install -r app-release.apk`
 PENDING:
-  [ ] Enable GitHub Pages on the repo (Settings -> Pages -> /docs)
+  [x] GitHub Pages ENABLED and LIVE (2026-10-06)
+      Root cause of earlier 404: the Pages build had been cancelled and the
+      source folder was /docs with no docs/index.html. Fixed by:
+        - privacy policy at repo root: privacy-policy/index.html
+        - docs/privacy-policy/index.html (Pages source = main /docs)
+        - docs/index.html redirect + root index.html redirect
+        - .nojekyll in both root and docs/
+      NOTE: Pages source for this repo is Branch=main, Folder=/docs.
+      Verified live:
+        https://codex-zubair.github.io/Net-Carve/privacy-policy/  -> 200
+        https://codex-zubair.github.io/Net-Carve/                 -> 200 (redirect)
   [ ] Play Console: create app, upload AAB, store listing, data safety
   [ ] Provide Play Store screenshots/feature graphic
 
