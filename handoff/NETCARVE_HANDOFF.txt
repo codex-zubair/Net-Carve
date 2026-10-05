@@ -57,10 +57,12 @@ PENDING:
         - docs/privacy-policy/index.html (Pages source = main /docs)
         - docs/index.html redirect + root index.html redirect
         - .nojekyll in both root and docs/
-      NOTE: Pages source for this repo is Branch=main, Folder=/docs.
-      Verified live:
-        https://codex-zubair.github.io/all_privacy_policy/netcarve/  -> 200
-        https://codex-zubair.github.io/Net-Carve/                 -> 200 (redirect)
+      MIGRATED to the central privacy repo (2026-10-06):
+        https://github.com/codex-zubair/all_privacy_policy
+        New URL: https://codex-zubair.github.io/all_privacy_policy/netcarve/
+      ACTION NEEDED: enable GitHub Pages on all_privacy_policy
+        Settings -> Pages -> Deploy from a branch -> main -> / (root)
+      The older per-repo URL still works as a fallback.
   [ ] Play Console: create app, upload AAB, store listing, data safety
   [ ] Provide Play Store screenshots/feature graphic
 
